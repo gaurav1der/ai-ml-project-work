@@ -29,20 +29,20 @@ Columns: 31.
 ### Key Columns:
 
 Flight Info:\
-    FL_DATE (flight date), AIRLINE, AIRLINE_CODE, FL_NUMBER. 
+    FL_DATE (flight date), AIRLINE, AIRLINE_CODE, FL_NUMBER.\
 Airports:\
-    ORIGIN, ORIGIN_CITY, DEST, DEST_CITY.  
+    ORIGIN, ORIGIN_CITY, DEST, DEST_CITY.\ 
 Times:\
-    Scheduled and actual departure/arrival times (CRS_DEP_TIME, DEP_TIME, CRS_ARR_TIME, ARR_TIME). 
-    Delays (DEP_DELAY, ARR_DELAY). 
-    Taxi times (TAXI_OUT, TAXI_IN). 
-    Wheels off/on times. 
+    Scheduled and actual departure/arrival times (CRS_DEP_TIME, DEP_TIME, CRS_ARR_TIME, ARR_TIME).\
+    Delays (DEP_DELAY, ARR_DELAY).\
+    Taxi times (TAXI_OUT, TAXI_IN).\
+    Wheels off/on times.\
 Flight Status:\
-    CANCELLED, CANCELLATION_CODE, DIVERTED. 
+    CANCELLED, CANCELLATION_CODE, DIVERTED.\
 Elapsed Times:\ 
-    Scheduled and actual elapsed time, air time, distance. 
+    Scheduled and actual elapsed time, air time, distance.\
 Delay Causes:\
-    Delays due to carrier, weather, NAS, security, late aircraft. 
+    Delays due to carrier, weather, NAS, security, late aircraft.\
 
 # Datasets
 
@@ -56,7 +56,7 @@ Traffic congestion and related problems are a common concern in urban areas. Und
 
 Analyzing traffic patterns by time of day and day of week.\
 Predicting traffic situations based on vehicle counts.\
-Studying the distribution of different vehicle types.\
+Studying the distribution of different vehicle types.
 
 ## Dataset location
 [Git URL](https://github.com/gaurav1der/ml-ai-examples/submission/1.4/datasets)
@@ -71,12 +71,12 @@ Columns: 9.
 
 ### Key Columns:
 
-Time: Time of observation (e.g., 12:00:00 AM). 
-Date: Day of the month (numeric). 
-Day of the week: Day name (e.g., Tuesday). 
-CarCount: Number of cars observed. 
-BikeCount: Number of bikes observed. 
-BusCount: Number of buses observed. 
-TruckCount: Number of trucks observed. 
-Total: Total vehicle count (sum of above). 
+Time: Time of observation (e.g., 12:00:00 AM). \
+Date: Day of the month (numeric). \
+Day of the week: Day name (e.g., Tuesday). \
+CarCount: Number of cars observed. \
+BikeCount: Number of bikes observed. \
+BusCount: Number of buses observed. \
+TruckCount: Number of trucks observed. \
+Total: Total vehicle count (sum of above). \
 Traffic Situation: Categorical label (e.g., low, normal, high, heavy) indicating traffic condition. 

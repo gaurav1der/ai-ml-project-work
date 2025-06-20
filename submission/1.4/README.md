@@ -10,10 +10,10 @@ https://www.transtats.bts.gov
 
 ## Purpose
 
-Analyzing flight delays, cancellations, and their causes. 
-Studying airline and airport performance. 
-Predictive modeling for delays. 
-How air lines group support can work to improve these delay factors to shorter the delay time and reduce flight cancellations. 
+Analyzing flight delays, cancellations, and their causes.\
+Studying airline and airport performance.\
+Predictive modeling for delays.\
+How air lines group support can work to improve these delay factors to shorter the delay time and reduce flight cancellations.\
 
 ## Dataset location
 [Git URL](https://github.com/gaurav1der/ml-ai-examples/submission/1.4/datasets)
@@ -54,9 +54,9 @@ Traffic congestion and related problems are a common concern in urban areas. Und
 
 ## Purpose
 
-Analyzing traffic patterns by time of day and day of week. 
-Predicting traffic situations based on vehicle counts. 
-Studying the distribution of different vehicle types.  
+Analyzing traffic patterns by time of day and day of week.\
+Predicting traffic situations based on vehicle counts.\
+Studying the distribution of different vehicle types.\
 
 ## Dataset location
 [Git URL](https://github.com/gaurav1der/ml-ai-examples/submission/1.4/datasets)

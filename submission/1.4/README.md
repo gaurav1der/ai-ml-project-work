@@ -28,37 +28,35 @@ Columns: 31.
 
 ### Key Columns:
 
-Flight Info:
+Flight Info:  
     FL_DATE (flight date), AIRLINE, AIRLINE_CODE, FL_NUMBER. 
-Airports:
+Airports:  
     ORIGIN, ORIGIN_CITY, DEST, DEST_CITY. 
-
-Times:
-
+Times:  
     Scheduled and actual departure/arrival times (CRS_DEP_TIME, DEP_TIME, CRS_ARR_TIME, ARR_TIME). 
     Delays (DEP_DELAY, ARR_DELAY). 
     Taxi times (TAXI_OUT, TAXI_IN). 
     Wheels off/on times. 
-Flight Status:
+Flight Status:  
     CANCELLED, CANCELLATION_CODE, DIVERTED. 
-Elapsed Times:
+Elapsed Times:  
     Scheduled and actual elapsed time, air time, distance. 
-Delay Causes:
+Delay Causes:  
     Delays due to carrier, weather, NAS, security, late aircraft. 
 
 # Datasets
 
-Traffic congestion
+Traffic congestion. 
 
 ## Description
 
-Traffic congestion and related problems are a common concern in urban areas. Understanding traffic patterns and analyzing data can provide valuable insights for transportation planning, infrastructure development, and congestion management.
+Traffic congestion and related problems are a common concern in urban areas. Understanding traffic patterns and analyzing data can provide valuable insights for transportation planning, infrastructure development, and congestion management.  
 
 ## Purpose
 
 Analyzing traffic patterns by time of day and day of week. 
 Predicting traffic situations based on vehicle counts. 
-Studying the distribution of different vehicle types. 
+Studying the distribution of different vehicle types.  
 
 ## Dataset location
 [Git URL](https://github.com/gaurav1der/ml-ai-examples/submission/1.4/datasets)

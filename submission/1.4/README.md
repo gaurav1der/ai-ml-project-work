@@ -28,20 +28,20 @@ Columns: 31.
 
 ### Key Columns:
 
-Flight Info:  
+Flight Info:\
     FL_DATE (flight date), AIRLINE, AIRLINE_CODE, FL_NUMBER. 
-Airports:  
-    ORIGIN, ORIGIN_CITY, DEST, DEST_CITY. 
-Times:  
+Airports:\
+    ORIGIN, ORIGIN_CITY, DEST, DEST_CITY.  
+Times:\
     Scheduled and actual departure/arrival times (CRS_DEP_TIME, DEP_TIME, CRS_ARR_TIME, ARR_TIME). 
     Delays (DEP_DELAY, ARR_DELAY). 
     Taxi times (TAXI_OUT, TAXI_IN). 
     Wheels off/on times. 
-Flight Status:  
+Flight Status:\
     CANCELLED, CANCELLATION_CODE, DIVERTED. 
-Elapsed Times:  
+Elapsed Times:\ 
     Scheduled and actual elapsed time, air time, distance. 
-Delay Causes:  
+Delay Causes:\
     Delays due to carrier, weather, NAS, security, late aircraft. 
 
 # Datasets

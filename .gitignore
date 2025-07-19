@@ -35,3 +35,26 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+#Pandas
+*.pkl
+# PyInstaller
+*.spec
+# PyCharm
+.idea/
+# VS Code
+.vscode/    
+# Coverage reports
+coverage.xml
+*.coveragerc
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/ 
+# Python egg files
+*.egg
+*.egg-info/
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+# PyInstaller
+*.spec

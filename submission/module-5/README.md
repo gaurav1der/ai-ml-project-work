@@ -66,6 +66,23 @@ Comprehensive investigation revealing:
 
 ## Major Insights
 
+### Bar Coupon Acceptance Drivers
+
+**Behavioral Patterns:**
+- **Frequency Effect**: Drivers who visit bars >3 times/month have **73.18% acceptance** vs. 37.06% for infrequent visitors
+- **Age Factor**: Younger drivers more likely to accept, especially when combined with frequent bar visits
+- **Demographic Combinations**: 
+  - Frequent bar visitors over 25: **69% acceptance** vs. 34% others
+  - Multi-condition targeting can achieve **71% acceptance rates**
+
+**Key Characteristics of Bar Coupon Accepters:**
+- Frequent bar visitors (more than 3 times/month)
+- Younger demographics (under 30 years)
+- Adult passengers (no kids in car)
+- Non-agricultural occupations
+- Higher income brackets
+- Social context preferred over solo driving
+
 ### Coffee House Coupon Acceptance Drivers
 
 **Demographics & Behavior:**

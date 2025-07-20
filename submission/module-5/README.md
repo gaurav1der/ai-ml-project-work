@@ -8,7 +8,7 @@ This project explores the question: "What factors determine whether a driver acc
 
 ## Jupyter notebook
 
-[module5.ipynb](/module5.ipynb)
+[module5.ipynb](/submission/module-5/module5.ipynb)
 
 ## Dataset Information
 

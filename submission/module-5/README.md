@@ -6,6 +6,10 @@ A comprehensive analysis of customer behavior regarding coupon acceptance while 
 
 This project explores the question: "What factors determine whether a driver accepts a coupon delivered to their cell phone while driving?" Using survey data from Amazon Mechanical Turk, we analyze various demographic, contextual, and behavioral factors that influence coupon acceptance across different venue types.
 
+## Jupyter notebook
+
+[module5.ipynb](submission/module-5/module5.ipynb)
+
 ## Dataset Information
 
 - **Source**: UCI Machine Learning Repository

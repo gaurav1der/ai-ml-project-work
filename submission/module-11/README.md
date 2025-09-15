@@ -48,7 +48,7 @@ The business goal is to identify the key factors that influence used car prices,
 
 ## 4. Modeling
 
-### Random Forest Model
+### 4.1 Random Forest Model
 1. Define the problem as a supervised regression task with `log_price` (log-transformed price) as the target variable.
 2. Prepare the feature matrix `X` by dropping the `log_price` column from the cleaned dataset (`df_model`).
 3. Prepare the target vector `y` as the `log_price` column.
@@ -58,10 +58,10 @@ The business goal is to identify the key factors that influence used car prices,
 7. Fit the model on the training data or sample.
 8. Predict on the test set and evaluate performance using RMSE and R².
 
-### Linear Regression Model
+### 4.2 Linear Regression Model
 Linear Regression was used as a baseline model to compare its performance with the Random Forest model.
 
-#### Steps for Linear Regression Modeling:
+**Steps for Linear Regression Modeling:**
 1. **Data Sampling**:
    - To speed up training, 1% of the dataset was used for training and testing.
    - The data was split into training and testing sets using `train_test_split`.
@@ -80,37 +80,50 @@ Linear Regression was used as a baseline model to compare its performance with t
 5. **Cross-Validation**:
    - A 3-fold cross-validation was performed to validate the model's performance across different subsets of the data.
 
-### HistGradientBoostingRegressor Model
+### 4.3 HistGradientBoostingRegressor Model
 The **HistGradientBoostingRegressor** is a fast and efficient implementation of gradient boosting for regression tasks. It is particularly well-suited for large datasets and provides competitive performance with reduced training time.
 
-#### Key Features:
+**Key Features:**
 - **Efficiency**: The histogram-based implementation significantly reduces training time compared to traditional gradient boosting methods.
 - **Performance**: Captures non-linear relationships between features and the target variable effectively.
 - **Scalability**: Handles large datasets efficiently.
 
-#### Model Configuration:
+**Model Configuration:**
 - **Max Iterations**: 50
 - **Max Depth**: 3
 - **Random State**: 42 (for reproducibility)
 
-#### Evaluation Metrics:
+**Evaluation Metrics:**
 - **RMSE (Root Mean Squared Error)**: 0.372
 - **R² (R-squared)**: 0.862
 
-#### Conclusion:
+**Conclusion:**
 The **HistGradientBoostingRegressor** is the best-performing model in this project, offering both speed and accuracy. It is well-suited for large datasets and provides a good balance between performance and computational efficiency.
 
 ---
 
-## 5. Evaluation
+## 5. Interpretation of Linear Regression Coefficients
 
-### Model Comparison Summary
+In a linear regression model, each coefficient represents the expected change in the target variable (in this case, the log-transformed car price) for a one-unit increase in the corresponding feature, assuming all other features remain constant. 
+
+- **Positive coefficients** indicate that as the feature increases, the predicted price also increases.
+- **Negative coefficients** indicate that as the feature increases, the predicted price decreases.
+
+The magnitude of each coefficient reflects the strength of the relationship between that feature and the target variable. Larger absolute values indicate a stronger impact on the prediction.
+
+Coefficients are especially useful for understanding which features have the most significant effect on the target and for interpreting both the direction and size of these effects.
+
+---
+
+## 6. Evaluation
+
+### 6.1 Model Comparison Summary
 
 This section summarizes the performance of the three regression models used in the analysis: **Linear Regression**, **Random Forest Regressor**, and **HistGradientBoostingRegressor**. The models were evaluated based on two key metrics:
 - **RMSE (Root Mean Squared Error)**: Measures the average prediction error in the same units as the target variable. Lower values indicate better performance.
 - **R² (R-squared)**: Indicates how well the model explains the variance in the target variable. Values closer to 1 suggest a better fit.
 
-#### Results:
+**Results:**
 
 | Model                        | RMSE   | R²    | Key Observations                                                                 |
 |------------------------------|--------|-------|----------------------------------------------------------------------------------|
@@ -124,7 +137,7 @@ This section summarizes the performance of the three regression models used in t
 |                              |        |       | - Captures non-linear relationships well.                                       |
 |                              |        |       | - Requires careful hyperparameter tuning for optimal performance.               |
 
-#### Key Findings:
+**Key Findings:**
 
 1. **Random Forest Regressor**:
    - Achieved better performance than Linear Regression by capturing non-linear patterns.
@@ -136,16 +149,16 @@ This section summarizes the performance of the three regression models used in t
    - Outperformed both Linear Regression and Random Forest in terms of speed and accuracy.
    - Well-suited for large datasets and provides a good balance between performance and computational efficiency.
 
-#### Conclusion:
+**Conclusion:**
 - The **HistGradientBoostingRegressor** is the best-performing model for this dataset, offering both speed and accuracy.
 - While **Random Forest Regressor** is also effective, it is slower and less efficient for large datasets.
 - **Linear Regression** serves as a simple baseline but is not suitable for capturing complex relationships in the data.
 
 ---
 
-## 6. Deployment
+## 7. Deployment
 
-### Deployment Process
+### 7.1 Deployment Process
 1. **Model Saving and Loading**:
    - The trained models were saved using `joblib` for future use.
    - The saved models were successfully loaded and verified by comparing predictions from the loaded models with the original predictions.
@@ -161,12 +174,12 @@ This section summarizes the performance of the three regression models used in t
 
 ---
 
-## 7. Findings
+## 8. Findings
 
-### Business Understanding
+### 8.1 Business Understanding
 - The primary objective of this analysis was to identify and quantify the key factors influencing the price of used cars. This understanding enables used car dealerships to make informed decisions about inventory acquisition, pricing strategies, and marketing efforts.
 
-### Data Cleaning and Preparation
+### 8.2 Data Cleaning and Preparation
 - The dataset was thoroughly cleaned to ensure high-quality data:
   - Removed duplicate records to avoid redundancy.
   - Dropped rows with missing values in critical columns (e.g., price, year, odometer, condition).
@@ -174,14 +187,14 @@ This section summarizes the performance of the three regression models used in t
   - Engineered new features, such as `car_age`, to better capture the relationship between vehicle characteristics and price.
   - Applied one-hot encoding to categorical variables and log transformations to skewed numerical features for improved model performance.
 
-### Key Findings
+### 8.3 Key Findings
 - **Actionable Insights**:
   - **Car Age**: Older cars are generally less valuable. Dealerships should focus on acquiring newer cars to maximize profitability.
   - **Mileage**: Cars with lower mileage command higher prices. Marketing efforts should emphasize low-mileage vehicles.
   - **Condition**: Cars in better condition (e.g., "like new") have significantly higher prices. Dealerships should prioritize vehicles in good condition or invest in reconditioning.
   - **Manufacturer and Model**: Certain brands and models consistently fetch higher prices. Inventory decisions should consider these trends.
 
-### Next Steps and Recommendations
+### 8.4 Next Steps and Recommendations
 1. **Expand Data Collection**:
    - Include additional features such as market demand, regional trends, and seasonal effects to improve model accuracy.
 2. **Hyperparameter Tuning**:

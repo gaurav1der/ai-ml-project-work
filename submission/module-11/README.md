@@ -114,13 +114,13 @@ This section summarizes the performance of the three regression models used in t
 
 | Model                        | RMSE   | R²    | Key Observations                                                                 |
 |------------------------------|--------|-------|----------------------------------------------------------------------------------|
-| **Linear Regression**        | 0.512  | 0.732 | - Simple and interpretable.                                                     |
-|                              |        |       | - Struggles to capture non-linear relationships in the data.                    |
-|                              |        |       | - Sensitive to multicollinearity and outliers.                                  |
-| **Random Forest Regressor**  | 0.398  | 0.845 | - Captures non-linear relationships effectively.                                |
+| **Random Forest Regressor**  | 0.460  | 0.725 | - Captures non-linear relationships effectively.                                |
 |                              |        |       | - Provides feature importance for interpretability.                             |
 |                              |        |       | - Computationally expensive for large datasets.                                 |
-| **HistGradientBoostingRegressor** | 0.372  | 0.862 | - Fast and efficient for large datasets.                                        |
+| **Linear Regression**        | 0.745  | 0.279 | - Simple and interpretable.                                                     |
+|                              |        |       | - Struggles to capture non-linear relationships in the data.                    |
+|                              |        |       | - Sensitive to multicollinearity and outliers.                                  |
+| **HistGradientBoostingRegressor** | 0.473  | 0.709 | - Fast and efficient for large datasets.                                        |
 |                              |        |       | - Captures non-linear relationships well.                                       |
 |                              |        |       | - Requires careful hyperparameter tuning for optimal performance.               |
 

@@ -102,16 +102,51 @@ The **HistGradientBoostingRegressor** is the best-performing model in this proje
 
 ---
 
-## 5. Interpretation of Linear Regression Coefficients
+## 5. Interpretation of Linear Regression Coefficients, Regression Model Coefficients and Feature Importances
 
-In a linear regression model, each coefficient represents the expected change in the target variable (in this case, the log-transformed car price) for a one-unit increase in the corresponding feature, assuming all other features remain constant. 
+### Linear Regression Coefficients
 
-- **Positive coefficients** indicate that as the feature increases, the predicted price also increases.
-- **Negative coefficients** indicate that as the feature increases, the predicted price decreases.
+In a linear regression model, each coefficient represents the expected change in the target variable (here, the log-transformed car price) for a one-unit increase in the corresponding feature, holding all other features constant.
 
-The magnitude of each coefficient reflects the strength of the relationship between that feature and the target variable. Larger absolute values indicate a stronger impact on the prediction.
+- **Positive coefficients**: As the feature increases, the predicted price increases.
+- **Negative coefficients**: As the feature increases, the predicted price decreases.
+- **Magnitude**: The absolute value of the coefficient indicates the strength of the relationship between the feature and the target variable.
 
-Coefficients are especially useful for understanding which features have the most significant effect on the target and for interpreting both the direction and size of these effects.
+Coefficients are especially useful for understanding which features have the most significant impact on the target and for interpreting the direction and size of these effects.
+
+---
+
+### Random Forest and Tree-Based Models: Feature Importances
+
+Tree-based models like RandomForestRegressor do not provide coefficients, but instead offer a `feature_importances_` attribute. This attribute reflects how much each feature contributes to reducing prediction error across all trees in the ensemble.
+
+- **Higher importance**: The feature plays a larger role in the model’s predictions.
+- **Lower importance**: The feature has less influence on the outcome.
+
+Feature importances help identify which variables are most influential in the model, but do not indicate the direction (positive or negative) of the relationship.
+
+---
+
+### HistGradientBoostingRegressor: Permutation Importance
+
+The `HistGradientBoostingRegressor` does not provide a `feature_importances_` attribute. Instead, feature importance can be assessed using **permutation importance**:
+
+- **Permutation importance** measures the decrease in model performance when the values of a single feature are randomly shuffled.
+- A larger decrease in performance indicates a more important feature.
+
+Permutation importance provides a model-agnostic way to interpret which features are most influential, even for models that do not natively support feature importances.
+
+---
+
+**Summary Table**
+
+| Model Type                | How to Interpret Importance         | Directionality | Output Attribute/Method         |
+|---------------------------|-------------------------------------|----------------|---------------------------------|
+| Linear Regression         | Coefficient value                   | Yes            | `coef_`                        |
+| Random Forest Regressor   | Feature importance (relative)       | No             | `feature_importances_`          |
+| HistGradientBoostingRegressor | Permutation importance (relative) | No             | `permutation_importance()`      |
+
+Understanding these outputs helps you interpret which features drive predictions in each model and supports data-driven business decisions.ave the most significant effect on the target and for interpreting both the direction and size of these effects.
 
 ---
 

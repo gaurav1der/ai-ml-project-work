@@ -125,13 +125,14 @@ This section summarizes the performance of the three regression models used in t
 |                              |        |       | - Requires careful hyperparameter tuning for optimal performance.               |
 
 #### Key Findings:
-1. **Linear Regression**:
-   - Performed the worst among the three models due to its inability to capture non-linear relationships in the data.
-   - Useful as a baseline model for comparison.
 
-2. **Random Forest Regressor**:
+1. **Random Forest Regressor**:
    - Achieved better performance than Linear Regression by capturing non-linear patterns.
    - Computationally more expensive, especially for large datasets.
+
+2. **Linear Regression**:
+   - Performed the worst among the three models due to its inability to capture non-linear relationships in the data.
+   - Useful as a baseline model for comparison.
 
 3. **HistGradientBoostingRegressor**:
    - Outperformed both Linear Regression and Random Forest in terms of speed and accuracy.

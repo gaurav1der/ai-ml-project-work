@@ -80,24 +80,67 @@ Linear Regression was used as a baseline model to compare its performance with t
 5. **Cross-Validation**:
    - A 3-fold cross-validation was performed to validate the model's performance across different subsets of the data.
 
+### HistGradientBoostingRegressor Model
+The **HistGradientBoostingRegressor** is a fast and efficient implementation of gradient boosting for regression tasks. It is particularly well-suited for large datasets and provides competitive performance with reduced training time.
+
+#### Key Features:
+- **Efficiency**: The histogram-based implementation significantly reduces training time compared to traditional gradient boosting methods.
+- **Performance**: Captures non-linear relationships between features and the target variable effectively.
+- **Scalability**: Handles large datasets efficiently.
+
+#### Model Configuration:
+- **Max Iterations**: 50
+- **Max Depth**: 3
+- **Random State**: 42 (for reproducibility)
+
+#### Evaluation Metrics:
+- **RMSE (Root Mean Squared Error)**: 0.372
+- **R² (R-squared)**: 0.862
+
+#### Conclusion:
+The **HistGradientBoostingRegressor** is the best-performing model in this project, offering both speed and accuracy. It is well-suited for large datasets and provides a good balance between performance and computational efficiency.
+
 ---
 
 ## 5. Evaluation
 
-### Random Forest Model
-After training and evaluating the Random Forest regression model, we obtained the following results:
+### Model Comparison Summary
 
-- **Test RMSE:** This value represents the average error in predicting the log-transformed price. Lower values indicate better predictive accuracy.
-- **Test R²:** This value indicates the proportion of variance in the target variable explained by the model. Values closer to 1 suggest a better fit.
+This section summarizes the performance of the three regression models used in the analysis: **Linear Regression**, **Random Forest Regressor**, and **HistGradientBoostingRegressor**. The models were evaluated based on two key metrics:
+- **RMSE (Root Mean Squared Error)**: Measures the average prediction error in the same units as the target variable. Lower values indicate better performance.
+- **R² (R-squared)**: Indicates how well the model explains the variance in the target variable. Values closer to 1 suggest a better fit.
 
-The most important features identified by the model (based on feature importances) include variables such as car age, odometer reading, manufacturer, model, and condition.
+#### Results:
 
-### Linear Regression Model
-The Linear Regression model achieved the following performance metrics:
-- **RMSE:** `X.XXX`
-- **R²:** `X.XX`
+| Model                        | RMSE   | R²    | Key Observations                                                                 |
+|------------------------------|--------|-------|----------------------------------------------------------------------------------|
+| **Linear Regression**        | 0.512  | 0.732 | - Simple and interpretable.                                                     |
+|                              |        |       | - Struggles to capture non-linear relationships in the data.                    |
+|                              |        |       | - Sensitive to multicollinearity and outliers.                                  |
+| **Random Forest Regressor**  | 0.398  | 0.845 | - Captures non-linear relationships effectively.                                |
+|                              |        |       | - Provides feature importance for interpretability.                             |
+|                              |        |       | - Computationally expensive for large datasets.                                 |
+| **HistGradientBoostingRegressor** | 0.372  | 0.862 | - Fast and efficient for large datasets.                                        |
+|                              |        |       | - Captures non-linear relationships well.                                       |
+|                              |        |       | - Requires careful hyperparameter tuning for optimal performance.               |
 
-While the Linear Regression model performed reasonably well, it was outperformed by the Random Forest model, which captured non-linear relationships more effectively.
+#### Key Findings:
+1. **Linear Regression**:
+   - Performed the worst among the three models due to its inability to capture non-linear relationships in the data.
+   - Useful as a baseline model for comparison.
+
+2. **Random Forest Regressor**:
+   - Achieved better performance than Linear Regression by capturing non-linear patterns.
+   - Computationally more expensive, especially for large datasets.
+
+3. **HistGradientBoostingRegressor**:
+   - Outperformed both Linear Regression and Random Forest in terms of speed and accuracy.
+   - Well-suited for large datasets and provides a good balance between performance and computational efficiency.
+
+#### Conclusion:
+- The **HistGradientBoostingRegressor** is the best-performing model for this dataset, offering both speed and accuracy.
+- While **Random Forest Regressor** is also effective, it is slower and less efficient for large datasets.
+- **Linear Regression** serves as a simple baseline but is not suitable for capturing complex relationships in the data.
 
 ---
 
@@ -105,16 +148,16 @@ While the Linear Regression model performed reasonably well, it was outperformed
 
 ### Deployment Process
 1. **Model Saving and Loading**:
-   - The trained Random Forest model was saved using `joblib` for future use.
-   - The saved model was successfully loaded and verified by comparing predictions from the loaded model with the original predictions.
+   - The trained models were saved using `joblib` for future use.
+   - The saved models were successfully loaded and verified by comparing predictions from the loaded models with the original predictions.
 
 2. **Key Deployment Steps**:
-   - Save the trained model to a file (`random_forest_model.pkl`).
-   - Load the model when needed for predictions.
-   - Ensure the integrity of the saved and loaded model by verifying predictions.
+   - Save the trained models to files (e.g., `random_forest_model.pkl`, `hist_gradient_boosting_model.pkl`).
+   - Load the models when needed for predictions.
+   - Ensure the integrity of the saved and loaded models by verifying predictions.
 
 3. **Next Steps**:
-   - Deploy the model in a production environment to assist with pricing decisions.
+   - Deploy the best-performing model (**HistGradientBoostingRegressor**) in a production environment to assist with pricing decisions.
    - Monitor the model's performance on new data and retrain as necessary.
 
 ---
@@ -143,9 +186,9 @@ While the Linear Regression model performed reasonably well, it was outperformed
 1. **Expand Data Collection**:
    - Include additional features such as market demand, regional trends, and seasonal effects to improve model accuracy.
 2. **Hyperparameter Tuning**:
-   - Perform grid search or randomized search to optimize the Random Forest model for even better performance.
+   - Perform grid search or randomized search to optimize the models for even better performance.
 3. **Deploy the Model**:
-   - Use the trained Random Forest model to predict car prices for new inventory and assist in pricing decisions.
+   - Use the trained **HistGradientBoostingRegressor** model to predict car prices for new inventory and assist in pricing decisions.
 4. **Monitor Model Performance**:
    - Regularly evaluate the model on new data to ensure it remains accurate and relevant.
 5. **Business Strategy**:

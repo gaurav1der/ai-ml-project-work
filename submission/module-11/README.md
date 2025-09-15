@@ -102,9 +102,43 @@ The **HistGradientBoostingRegressor** is the best-performing model in this proje
 
 ---
 
-## 5. Interpretation of Linear Regression Coefficients, Regression Model Coefficients and Feature Importances
+## 5. Grid Search for Hyperparameters
 
-### Linear Regression Coefficients
+This project uses grid search to optimize the hyperparameters of all regression models. Grid search is performed using scikit-learn's `GridSearchCV` or `RandomizedSearchCV`, which systematically tests different combinations of model parameters to find the best settings based on cross-validated performance.
+
+### 5.1 How Grid Search Works
+
+- **Parameter Grid:** Define a dictionary of hyperparameters and their possible values for each model.
+- **Cross-Validation:** For each combination, the model is trained and validated using cross-validation.
+- **Scoring:** The best combination is selected based on a scoring metric (e.g., negative mean squared error).
+
+### 5.2 Example Usage
+
+```python
+from sklearn.model_selection import GridSearchCV
+from sklearn.ensemble import RandomForestRegressor
+
+param_grid = {
+    'n_estimators': [10, 50, 100],
+    'max_depth': [5, 10, None]
+}
+grid = GridSearchCV(RandomForestRegressor(), param_grid, cv=3, scoring='neg_mean_squared_error')
+grid.fit(X_train, y_train)
+print("Best parameters:", grid.best_params_)
+```
+
+### 5.3 Tips for Large Datasets
+
+- Use a smaller sample of your data for grid search to reduce execution time.
+- Limit the number of parameter combinations and cross-validation folds.
+- For large grids, use `RandomizedSearchCV` to randomly sample parameter combinations.
+
+See the notebook for detailed grid search examples for Linear Regression, Random Forest, and HistGradientBoostingRegressor.
+
+--- 
+## 6. Interpretation of Linear Regression Coefficients, Regression Model Coefficients and Feature Importances
+
+### 6.1 Linear Regression Coefficients
 
 In a linear regression model, each coefficient represents the expected change in the target variable (here, the log-transformed car price) for a one-unit increase in the corresponding feature, holding all other features constant.
 
@@ -116,7 +150,7 @@ Coefficients are especially useful for understanding which features have the mos
 
 ---
 
-### Random Forest and Tree-Based Models: Feature Importances
+### 6.2 Random Forest and Tree-Based Models: Feature Importances
 
 Tree-based models like RandomForestRegressor do not provide coefficients, but instead offer a `feature_importances_` attribute. This attribute reflects how much each feature contributes to reducing prediction error across all trees in the ensemble.
 
@@ -127,7 +161,7 @@ Feature importances help identify which variables are most influential in the mo
 
 ---
 
-### HistGradientBoostingRegressor: Permutation Importance
+### 6.3 HistGradientBoostingRegressor: Permutation Importance
 
 The `HistGradientBoostingRegressor` does not provide a `feature_importances_` attribute. Instead, feature importance can be assessed using **permutation importance**:
 
@@ -146,13 +180,13 @@ Permutation importance provides a model-agnostic way to interpret which features
 | Random Forest Regressor   | Feature importance (relative)       | No             | `feature_importances_`          |
 | HistGradientBoostingRegressor | Permutation importance (relative) | No             | `permutation_importance()`      |
 
-Understanding these outputs helps you interpret which features drive predictions in each model and supports data-driven business decisions.ave the most significant effect on the target and for interpreting both the direction and size of these effects.
+Understanding these outputs helps you interpret which features drive predictions in each model and supports data-driven business decisions.
 
 ---
 
-## 6. Evaluation
+## 7. Evaluation
 
-### 6.1 Model Comparison Summary
+### 7.1 Model Comparison Summary
 
 This section summarizes the performance of the three regression models used in the analysis: **Linear Regression**, **Random Forest Regressor**, and **HistGradientBoostingRegressor**. The models were evaluated based on two key metrics:
 - **RMSE (Root Mean Squared Error)**: Measures the average prediction error in the same units as the target variable. Lower values indicate better performance.
@@ -191,9 +225,9 @@ This section summarizes the performance of the three regression models used in t
 
 ---
 
-## 7. Deployment
+## 8. Deployment
 
-### 7.1 Deployment Process
+### 8.1 Deployment Process
 1. **Model Saving and Loading**:
    - The trained models were saved using `joblib` for future use.
    - The saved models were successfully loaded and verified by comparing predictions from the loaded models with the original predictions.
@@ -209,12 +243,12 @@ This section summarizes the performance of the three regression models used in t
 
 ---
 
-## 8. Findings
+## 9. Findings
 
-### 8.1 Business Understanding
+### 9.1 Business Understanding
 - The primary objective of this analysis was to identify and quantify the key factors influencing the price of used cars. This understanding enables used car dealerships to make informed decisions about inventory acquisition, pricing strategies, and marketing efforts.
 
-### 8.2 Data Cleaning and Preparation
+### 9.2 Data Cleaning and Preparation
 - The dataset was thoroughly cleaned to ensure high-quality data:
   - Removed duplicate records to avoid redundancy.
   - Dropped rows with missing values in critical columns (e.g., price, year, odometer, condition).
@@ -222,14 +256,14 @@ This section summarizes the performance of the three regression models used in t
   - Engineered new features, such as `car_age`, to better capture the relationship between vehicle characteristics and price.
   - Applied one-hot encoding to categorical variables and log transformations to skewed numerical features for improved model performance.
 
-### 8.3 Key Findings
+### 9.3 Key Findings
 - **Actionable Insights**:
   - **Car Age**: Older cars are generally less valuable. Dealerships should focus on acquiring newer cars to maximize profitability.
   - **Mileage**: Cars with lower mileage command higher prices. Marketing efforts should emphasize low-mileage vehicles.
   - **Condition**: Cars in better condition (e.g., "like new") have significantly higher prices. Dealerships should prioritize vehicles in good condition or invest in reconditioning.
   - **Manufacturer and Model**: Certain brands and models consistently fetch higher prices. Inventory decisions should consider these trends.
 
-### 8.4 Next Steps and Recommendations
+### 9.4 Next Steps and Recommendations
 1. **Expand Data Collection**:
    - Include additional features such as market demand, regional trends, and seasonal effects to improve model accuracy.
 2. **Hyperparameter Tuning**:

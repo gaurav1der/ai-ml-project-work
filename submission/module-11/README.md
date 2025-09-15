@@ -274,3 +274,7 @@ This section summarizes the performance of the three regression models used in t
    - Regularly evaluate the model on new data to ensure it remains accurate and relevant.
 5. **Business Strategy**:
    - Use insights from the analysis to guide inventory acquisition, pricing strategies, and marketing campaigns.
+
+### ## Jupyter notebook
+
+[module11.ipynb](/submission/module-11/module11.ipynb)

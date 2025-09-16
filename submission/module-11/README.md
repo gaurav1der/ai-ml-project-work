@@ -84,20 +84,21 @@ Linear Regression was used as a baseline model to compare its performance with t
 The **HistGradientBoostingRegressor** is a fast and efficient implementation of gradient boosting for regression tasks. It is particularly well-suited for large datasets and provides competitive performance with reduced training time.
 
 **Key Features:**
-- **Efficiency**: The histogram-based implementation significantly reduces training time compared to traditional gradient boosting methods.
-- **Performance**: Captures non-linear relationships between features and the target variable effectively.
-- **Scalability**: Handles large datasets efficiently.
+- **Efficiency:** The histogram-based implementation significantly reduces training time compared to traditional gradient boosting methods.
+- **Performance:** Captures non-linear relationships between features and the target variable effectively.
+- **Scalability:** Handles large datasets efficiently.
 
 **Model Configuration:**
-- **Max Iterations**: 50
-- **Max Depth**: 3
-- **Random State**: 42 (for reproducibility)
+- **Max Iterations:** 50
+- **Max Depth:** 3
+- **Random State:** 42 (for reproducibility)
 
-**Evaluation Metrics:**
-- **RMSE (Root Mean Squared Error)**: 0.372
-- **R² (R-squared)**: 0.862
+**Evaluation Metrics:**  
+*Note: The RMSE and R² values below are sample values. Actual results may vary depending on the data sample and random state.*
+- **RMSE (Root Mean Squared Error):** 0.372
+- **R² (R-squared):** 0.862
 
-**Conclusion:**
+**Conclusion:**  
 The **HistGradientBoostingRegressor** is the best-performing model in this project, offering both speed and accuracy. It is well-suited for large datasets and provides a good balance between performance and computational efficiency.
 
 ---
@@ -132,19 +133,21 @@ print("Best parameters:", grid.best_params_)
 - Use a smaller sample of your data for grid search to reduce execution time.
 - Limit the number of parameter combinations and cross-validation folds.
 - For large grids, use `RandomizedSearchCV` to randomly sample parameter combinations.
+- In the notebook, small samples and reduced parameter grids are used for speed.
 
 See the notebook for detailed grid search examples for Linear Regression, Random Forest, and HistGradientBoostingRegressor.
 
---- 
+---
+
 ## 6. Interpretation of Linear Regression Coefficients, Regression Model Coefficients and Feature Importances
 
 ### 6.1 Linear Regression Coefficients
 
 In a linear regression model, each coefficient represents the expected change in the target variable (here, the log-transformed car price) for a one-unit increase in the corresponding feature, holding all other features constant.
 
-- **Positive coefficients**: As the feature increases, the predicted price increases.
-- **Negative coefficients**: As the feature increases, the predicted price decreases.
-- **Magnitude**: The absolute value of the coefficient indicates the strength of the relationship between the feature and the target variable.
+- **Positive coefficients:** As the feature increases, the predicted price increases.
+- **Negative coefficients:** As the feature increases, the predicted price decreases.
+- **Magnitude:** The absolute value of the coefficient indicates the strength of the relationship between the feature and the target variable.
 
 Coefficients are especially useful for understanding which features have the most significant impact on the target and for interpreting the direction and size of these effects.
 
@@ -154,8 +157,8 @@ Coefficients are especially useful for understanding which features have the mos
 
 Tree-based models like RandomForestRegressor do not provide coefficients, but instead offer a `feature_importances_` attribute. This attribute reflects how much each feature contributes to reducing prediction error across all trees in the ensemble.
 
-- **Higher importance**: The feature plays a larger role in the model’s predictions.
-- **Lower importance**: The feature has less influence on the outcome.
+- **Higher importance:** The feature plays a larger role in the model’s predictions.
+- **Lower importance:** The feature has less influence on the outcome.
 
 Feature importances help identify which variables are most influential in the model, but do not indicate the direction (positive or negative) of the relationship.
 
@@ -189,10 +192,11 @@ Understanding these outputs helps you interpret which features drive predictions
 ### 7.1 Model Comparison Summary
 
 This section summarizes the performance of the three regression models used in the analysis: **Linear Regression**, **Random Forest Regressor**, and **HistGradientBoostingRegressor**. The models were evaluated based on two key metrics:
-- **RMSE (Root Mean Squared Error)**: Measures the average prediction error in the same units as the target variable. Lower values indicate better performance.
-- **R² (R-squared)**: Indicates how well the model explains the variance in the target variable. Values closer to 1 suggest a better fit.
+- **RMSE (Root Mean Squared Error):** Measures the average prediction error in the same units as the target variable. Lower values indicate better performance.
+- **R² (R-squared):** Indicates how well the model explains the variance in the target variable. Values closer to 1 suggest a better fit.
 
-**Results:**
+**Results:**  
+*Note: The following values are examples. Actual results may vary depending on the data sample and random state.*
 
 | Model                        | RMSE   | R²    | Key Observations                                                                 |
 |------------------------------|--------|-------|----------------------------------------------------------------------------------|
@@ -208,17 +212,17 @@ This section summarizes the performance of the three regression models used in t
 
 **Key Findings:**
 
-1. **Random Forest Regressor**:
+1. **Random Forest Regressor:**
    - Achieved better performance than Linear Regression by capturing non-linear patterns.
    - Computationally more expensive, especially for large datasets.
-2. **Linear Regression**:
+2. **Linear Regression:**
    - Performed the worst among the three models due to its inability to capture non-linear relationships in the data.
    - Useful as a baseline model for comparison.
-3. **HistGradientBoostingRegressor**:
+3. **HistGradientBoostingRegressor:**
    - Outperformed both Linear Regression and Random Forest in terms of speed and accuracy.
    - Well-suited for large datasets and provides a good balance between performance and computational efficiency.
 
-**Conclusion:**
+**Conclusion:**  
 - The **HistGradientBoostingRegressor** is the best-performing model for this dataset, offering both speed and accuracy.
 - While **Random Forest Regressor** is also effective, it is slower and less efficient for large datasets.
 - **Linear Regression** serves as a simple baseline but is not suitable for capturing complex relationships in the data.
@@ -228,16 +232,16 @@ This section summarizes the performance of the three regression models used in t
 ## 8. Deployment
 
 ### 8.1 Deployment Process
-1. **Model Saving and Loading**:
+1. **Model Saving and Loading:**
    - The trained models were saved using `joblib` for future use.
    - The saved models were successfully loaded and verified by comparing predictions from the loaded models with the original predictions.
 
-2. **Key Deployment Steps**:
+2. **Key Deployment Steps:**
    - Save the trained models to files (e.g., `random_forest_model.pkl`, `hist_gradient_boosting_model.pkl`).
    - Load the models when needed for predictions.
    - Ensure the integrity of the saved and loaded models by verifying predictions.
 
-3. **Next Steps**:
+3. **Next Steps:**
    - Deploy the best-performing model (**HistGradientBoostingRegressor**) in a production environment to assist with pricing decisions.
    - Monitor the model's performance on new data and retrain as necessary.
 
@@ -257,24 +261,56 @@ This section summarizes the performance of the three regression models used in t
   - Applied one-hot encoding to categorical variables and log transformations to skewed numerical features for improved model performance.
 
 ### 9.3 Key Findings
-- **Actionable Insights**:
-  - **Car Age**: Older cars are generally less valuable. Dealerships should focus on acquiring newer cars to maximize profitability.
-  - **Mileage**: Cars with lower mileage command higher prices. Marketing efforts should emphasize low-mileage vehicles.
-  - **Condition**: Cars in better condition (e.g., "like new") have significantly higher prices. Dealerships should prioritize vehicles in good condition or invest in reconditioning.
-  - **Manufacturer and Model**: Certain brands and models consistently fetch higher prices. Inventory decisions should consider these trends.
+- **Actionable Insights:**
+  - **Car Age:** Older cars are generally less valuable. Dealerships should focus on acquiring newer cars to maximize profitability.
+  - **Mileage:** Cars with lower mileage command higher prices. Marketing efforts should emphasize low-mileage vehicles.
+  - **Condition:** Cars in better condition (e.g., "like new") have significantly higher prices. Dealerships should prioritize vehicles in good condition or invest in reconditioning.
+  - **Manufacturer and Model:** Certain brands and models consistently fetch higher prices. Inventory decisions should consider these trends.
 
 ### 9.4 Next Steps and Recommendations
-1. **Expand Data Collection**:
+1. **Expand Data Collection:**
    - Include additional features such as market demand, regional trends, and seasonal effects to improve model accuracy.
-2. **Hyperparameter Tuning**:
+2. **Hyperparameter Tuning:**
    - Perform grid search or randomized search to optimize the models for even better performance.
-3. **Deploy the Model**:
+3. **Deploy the Model:**
    - Use the trained **HistGradientBoostingRegressor** model to predict car prices for new inventory and assist in pricing decisions.
-4. **Monitor Model Performance**:
+4. **Monitor Model Performance:**
    - Regularly evaluate the model on new data to ensure it remains accurate and relevant.
-5. **Business Strategy**:
+5. **Business Strategy:**
    - Use insights from the analysis to guide inventory acquisition, pricing strategies, and marketing campaigns.
 
-### 10 Jupyter notebook
+---
 
-[module11.ipynb](/submission/module-11/module11.ipynb)
+## 10. Visualizations
+
+- All plots and charts generated by the notebook are saved in the `images/` directory.
+- To ensure images are saved correctly, `plt.savefig()` is always called before `plt.show()` in the notebook.
+- Example plots include distributions of car condition, price, odometer, and relationships between features.
+
+---
+
+## 11. Requirements
+
+- Python 3.8+
+- pandas, numpy, scikit-learn, matplotlib, seaborn, joblib
+
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+or install individually as needed.
+
+---
+
+## 12. How to Run
+
+- Open `module11.ipynb` in Jupyter Notebook or VS Code and run all cells in order.
+- For best results, ensure the dataset (`vehicles.csv`) is in the correct `data/` directory.
+
+---
+
+## 13. Jupyter Notebook
+
+[Open module11.ipynb](module11.ipynb)
+
+---

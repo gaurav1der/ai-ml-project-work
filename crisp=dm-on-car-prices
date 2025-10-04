@@ -1,0 +1,52 @@
+Using CRISP-DM (Cross-Industry Standard Process for Data Mining) to predict old car prices
+
+Here's how each phase applies to predicting old car prices:
+
+1. Business Understanding:
+Define the problem: What is the goal of predicting old car prices? Is it for valuation, pricing strategies, or market analysis? 
+Determine objectives: What specific questions need to be answered? For example, "What is the price range for a 1970s Mustang in good condition?" 
+Assess situation: What data sources are available? What are the constraints and resources? 
+Produce project plan: Outline the steps, timelines, and resources needed for the project. 
+Number of previous owners
+Involved in accidents? if yes, how many?
+
+2. Data Understanding:
+Collect initial data:
+. Gather data from sources like online marketplaces, dealerships, and auction sites.
+Describe data:
+. Understand the format, structure, and content of the data (e.g., make, model, year, mileage, condition, features, price).
+Explore data:
+. Analyze the data to understand distributions, relationships, and potential issues (e.g., outliers, missing values).
+Verify data quality:
+. Check for errors, missing values, and inconsistencies in the data. 
+3. Data Preparation:
+Select data: Choose the relevant variables (features) for prediction. 
+Clean data: Handle missing values, outliers, and inconsistencies. This might involve imputation, deletion, or transformation of data. 
+Construct data: Create new features from existing ones if needed (e.g., age of the car, engine size). 
+Integrate data: Combine data from multiple sources if necessary. 
+Format data: Ensure data is in the correct format for modeling (e.g., numerical, categorical). 
+4. Modeling:
+Select modeling techniques:
+Choose appropriate algorithms for predicting car prices (e.g., regression models like linear regression, decision trees, or ensemble methods like random forest or gradient boosting). 
+Generate test design: Split the data into training and testing sets to evaluate model performance. 
+Build model: Train the chosen model(s) on the training data. 
+Assess model:Evaluate the performance of the model on the test data using appropriate metrics (e.g., RMSE, R-squared). 
+5. Evaluation:
+Evaluate results: Assess whether the model meets the business objectives. 
+Review process: Identify areas for improvement in the model or data preparation. 
+Determine next steps: Decide whether to refine the model, explore different algorithms, or gather more data. 
+6. Deployment:
+Plan deployment: Determine how the model will be used in practice (e.g., integrating it into a website, generating reports). 
+Plan monitoring: Establish a plan to monitor the model's performance over time and retrain it if necessary. 
+Produce final report: Summarize the project findings and recommendations. 
+Review project: Reflect on the overall project and identify lessons learned. 
+
+TDSP is similar to CRISP-DM but adds an emphasis on team roles and collaborative workflows
+OSEMN Framework: OSEMN (Obtain, Scrub, Explore, Model, Interpret) is a more focused framework that emphasizes the core data science task
+
+I used part of TDSP in this research as below
+
+Define Objectives: Collaborate with stakeholders to identify the business problem (e.g., predicting used car prices) and its requirements.
+
+Data Acquisition and Understanding: 
+Ingest Data: Collect data from the identified sources and load it into the chosen analytics environment.

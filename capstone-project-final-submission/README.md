@@ -11,7 +11,7 @@ This capstone project analyzes Amazon Product Reviews using exploratory data ana
 ## 📁 Project Structure
 
 ```
-final/
+capstone-project-final-submission/
 ├── README.md                                    # Project overview and findings
 ├── notebooks/
 │   └── amazon_reviews_analysis_kaggle.ipynb    # Main analysis notebook

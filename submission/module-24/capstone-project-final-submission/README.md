@@ -362,7 +362,7 @@ All visualizations feature:
 - **Requirements File**: All necessary Python dependencies for easy reproduction
 - **Kaggle Integration**: Direct compatibility with real Amazon reviews datasets
 
-## 🔧 Technical Improvements (December 2024)
+## 🔧 Technical Improvements (December 2025)
 
 **Recent Updates:**
 - ✅ **Enhanced Model Analysis**: Expanded from single Linear Regression to comprehensive 5-model comparison

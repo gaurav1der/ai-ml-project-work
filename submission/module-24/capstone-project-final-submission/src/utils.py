@@ -5,8 +5,8 @@ Amazon Product Reviews Analysis - Utility Functions
 This module contains helper functions for data cleaning, feature engineering,
 and analysis used in the Amazon Product Reviews capstone project.
 
-Author: [Your Name]
-Date: November 2024
+Author: Gaurav Goel
+Date: January 2025
 UC Berkeley ML/AI Program
 """
 

@@ -486,9 +486,9 @@ This project fulfills the capstone requirements for the UC Berkeley Machine Lear
 
 ## 📅 Project Timeline
 
-- **Start Date**: November 2025
-- **Completion Date**: December 2025
-- **Last Updated**: November 23, 2025
+- **Start Date**: November 2024
+- **Completion Date**: January 2025
+- **Last Updated**: January 8, 2025
 
 ---
 

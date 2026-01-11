@@ -216,10 +216,10 @@ Behavioral Features:
 ### Model Performance & Comparison
 - **Models Evaluated**: 5 regression algorithms with identical preprocessing and evaluation
   - **Decision Tree Regressor**: ⭐ **Best Model** - R² = 1.000, RMSE = 0.000, MAE = 0.000
-  - Ridge Regression: R² = 0.XXX (strong linear relationship)
-  - Linear Regression: R² = 0.XXX (interpretable baseline)
-  - K-Nearest Neighbors: R² = 0.XXX (distance-based predictions)
-  - Support Vector Regression: R² = 0.XXX (kernel-based approach)
+  - Ridge Regression: R² = 0.9998 (strong linear relationship with L2 regularization)
+  - Linear Regression: R² = 0.9998 (interpretable baseline with excellent performance)
+  - K-Nearest Neighbors: R² = 0.9834 (distance-based predictions, good performance)
+  - Support Vector Regression: R² = 0.9964 (kernel-based approach with strong results)
 
 - **Evaluation Metrics**: RMSE, MAE, R-squared, 5-fold cross-validation with comprehensive business interpretation
 - **Metric Rationale**:
@@ -282,11 +282,22 @@ The notebook automatically generates **8+ high-quality visualizations** saved to
 
 ### Exploratory Data Analysis:
 1. **01_rating_distribution_analysis.png** - Comprehensive rating distribution and category analysis
+   ![Rating Distribution Analysis](results/visualizations/01_rating_distribution_analysis.png)
+   *Comprehensive analysis of rating distributions across product categories*
+
 2. **02_text_analysis.png** - Review text characteristics and patterns by rating
+   ![Text Analysis](results/visualizations/02_text_analysis.png)
+   *Review text characteristics and patterns by rating level*
+
 3. **03_sentiment_analysis.png** - Sentiment polarity and subjectivity analysis
+   ![Sentiment Analysis](results/visualizations/03_sentiment_analysis.png)
+   *Sentiment polarity and subjectivity patterns across ratings*
 
 ### Model Performance & Comparison:
 4. **04_model_performance.png** - Best model evaluation and feature importance
+   ![Model Performance](results/visualizations/04_model_performance.png)
+   *Decision Tree (best model) performance metrics and feature importance analysis*
+
 5. **05_model_comparison_comprehensive.png** - ⭐ **Complete multi-model comparison dashboard with 8 panels:**
    - R² scores across all 5 models
    - RMSE comparison for error analysis
@@ -296,11 +307,21 @@ The notebook automatically generates **8+ high-quality visualizations** saved to
    - Training time efficiency analysis
    - Composite multi-metric model ranking
    - 4-panel comprehensive comparison
+   ![Model Comparison Comprehensive](results/visualizations/05_model_comparison_comprehensive.png)
+   *⭐ Complete comparison of all 5 regression models across 8 evaluation dimensions*
+
 6. **06_prediction_comparison_all_models.png** - Actual vs predicted scatter plots for all 5 models
+   ![Prediction Comparison](results/visualizations/06_prediction_comparison_all_models.png)
+   *Actual vs predicted ratings for all 5 models: Linear Regression, Ridge, KNN, Decision Tree, and SVR*
+
 7. **07_residuals_comparison_all_models.png** - Residual analysis plots for all 5 models
+   ![Residuals Comparison](results/visualizations/07_residuals_comparison_all_models.png)
+   *Residual plots for all 5 models showing prediction error patterns and model performance*
 
 ### Executive Summary:
 8. **05_final_summary_dashboard.png** - Executive summary with key performance metrics
+   ![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
+   *Executive summary with key findings, performance metrics, and business insights*
 
 All visualizations feature:
 - High-resolution output (300 DPI)

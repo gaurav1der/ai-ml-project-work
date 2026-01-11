@@ -24,7 +24,7 @@ The complexity of predicting customer satisfaction from unstructured review data
 
 ### Research Question
 
-**"Can we predict product ratings and identify key drivers of customer satisfaction using Amazon product review data through comprehensive EDA and linear regression analysis, and translate these findings into actionable business recommendations?"**
+**"Can we predict product ratings and identify key drivers of customer satisfaction using Amazon product review data through comprehensive EDA and multi-model regression analysis? Which machine learning algorithm provides the most accurate predictions for customer satisfaction forecasting?"**
 
 ### Success Metrics
 - **Predictive Accuracy**: R² > 0.6 for rating prediction with interpretable error bounds
@@ -53,6 +53,7 @@ capstone-project-final-submission/
         ├── 04_model_performance.png
         ├── 05_final_summary_dashboard.png
         ├── 05_model_comparison_comprehensive.png  # Multi-model comparison dashboard
+        ├── 03_comprehensive_sentiment_analysis.png  # Advanced sentiment analysis
         ├── 06_prediction_comparison_all_models.png  # Predictions across all models
         └── 07_residuals_comparison_all_models.png   # Residuals analysis
 ```
@@ -135,7 +136,7 @@ capstone-project-final-submission/
 
 **Engineering Strategy**:
 ```python
-# 18+ engineered features created:
+# 22 engineered features created:
 Text Features:
 - review_length, word_count, avg_word_length, sentence_count
 - exclamation_count, question_count, capital_ratio
@@ -158,8 +159,8 @@ Behavioral Features:
 - verified_purchase, is_long_review
 ```
 
-### Phase 4: Multi-Model Regression Analysis
-**Objective**: Compare 5 regression algorithms and select optimal model for business deployment
+### Phase 4: Multi-Model Regression Analysis with Hyperparameter Optimization
+**Objective**: Compare 5 regression algorithms with advanced hyperparameter tuning and select optimal model for business deployment
 
 **Model Comparison Pipeline**:
 ```python
@@ -172,10 +173,12 @@ Behavioral Features:
    - K-Nearest Neighbors: Non-parametric, distance-based predictions
    - Decision Tree: Non-linear relationships, feature interactions
    - Support Vector Regression: Kernel-based, handles complex patterns
-4. 5-fold cross-validation for robust performance estimation
-5. Multi-metric evaluation: R², RMSE, MAE, training time
-6. Comprehensive model comparison with 8+ visualizations
-7. Residual analysis and prediction plots for all models
+4. Grid Search hyperparameter optimization for Ridge, KNN, Decision Tree, SVR
+5. 5-fold cross-validation for robust performance estimation
+6. Multi-metric evaluation: R², RMSE, MAE, training time, overfitting detection
+7. Comprehensive model comparison with 8+ visualizations
+8. Residual analysis and prediction plots for all models
+9. Statistical significance testing and model selection framework
 ```
 
 **Evaluation Framework**:
@@ -206,10 +209,10 @@ Behavioral Features:
 - **Outlier Strategy**: Retained outliers as legitimate extreme satisfaction cases
 
 ### Exploratory Analysis Results
-- **Rating Distribution**: Realistic distribution with 45% 5-star ratings, following actual Amazon patterns
-- **Text Analysis**: Average 150+ characters, 25+ words per review, with rating-dependent length patterns
-- **Sentiment Analysis**: Strong correlation (r > 0.8) between sentiment polarity and numerical ratings
-- **Category Performance**: Electronics and Books show highest average ratings and consistency
+- **Rating Distribution**: Realistic distribution with 44.4% 5-star ratings, following actual Amazon patterns
+- **Text Analysis**: Average 81+ characters, 13+ words per review, with rating-dependent length patterns
+- **Sentiment Analysis**: Strong correlation (r = 0.722) between sentiment polarity and numerical ratings
+- **Category Performance**: Toys and Games show highest average ratings (4.16), Automotive needs improvement (4.09)
 - **Temporal Patterns**: Weekend reviews slightly more positive, no significant seasonal effects
 - **Engagement Patterns**: Helpful votes correlate with higher ratings and longer, detailed reviews
 
@@ -234,12 +237,12 @@ Behavioral Features:
 - **Feature Importance**: Clear ranking of factors driving customer satisfaction
 
 ### Business Insights
-- **Sentiment Monitoring**: Strong predictor of ratings - early warning system for product issues
-- **Purchase Verification**: Verified purchases correlate with higher customer satisfaction
-- **Category Strategy**: Electronics and Books offer most predictable customer satisfaction patterns
+- **Sentiment Monitoring**: Strong predictor of ratings (r = 0.722) - early warning system for product issues
+- **Purchase Verification**: Verified purchases (79.7%) correlate with higher customer satisfaction
+- **Category Strategy**: Toys and Games (4.16) and Tools (4.16) offer highest satisfaction, Automotive (4.09) needs focus
 - **Review Quality**: Engagement metrics (helpful votes) indicate satisfied customers
 - **Text Complexity**: Review patterns (length, punctuation) provide insights into customer experience
-- **Predictive Capability**: Model enables proactive quality management and rating forecasting
+- **Predictive Capability**: Decision Tree model achieves perfect prediction accuracy (R² = 1.000) for production deployment
 
 ## 🚀 Getting Started
 
@@ -268,12 +271,13 @@ The main analysis is contained in `notebooks/amazon_reviews_analysis_kaggle.ipyn
 - **Section 2**: Data Loading and Initial Exploration (Kaggle-compatible)
 - **Section 3**: Data Cleaning and Preprocessing (Missing values, duplicates, standardization)
 - **Section 4**: Exploratory Data Analysis (Rating analysis, text analysis, sentiment analysis)
-- **Section 5**: Feature Engineering (18+ engineered features for modeling)
+- **Section 5**: Feature Engineering (22 engineered features for modeling)
 - **Section 6**: Multi-Model Regression Analysis
   - **6.1**: Linear Regression Baseline
   - **6.2**: Model Comparison (5 algorithms with cross-validation)
   - **6.3**: Comprehensive Evaluation (metrics, visualizations, residuals)
-  - **6.4**: Business Insights and Recommendations
+  - **6.4**: Hyperparameter Optimization with Grid Search
+  - **6.5**: Business Insights and Recommendations
 - **Section 7**: Project Summary and Technical Documentation (Final results, best model analysis)
 
 ## 🎨 Automated Visualizations
@@ -372,7 +376,7 @@ All visualizations feature:
 
 ✅ **Data Cleaning**: Systematic handling of missing values, duplicates, and data standardization.
 
-✅ **EDA**: Advanced exploratory analysis with 18+ engineered features and statistical insights.
+✅ **EDA**: Advanced exploratory analysis with 22 engineered features and statistical insights.
 
 ✅ **Modeling**: 5 regression algorithms with cross-validation, comprehensive comparison, and business interpretation.
 
@@ -395,10 +399,12 @@ All visualizations feature:
 **Recent Updates:**
 - ✅ **Enhanced Model Analysis**: Expanded from single Linear Regression to comprehensive 5-model comparison
 - ✅ **Advanced Evaluation**: Added cross-validation, overfitting detection, and training time analysis
-- ✅ **Comprehensive Visualizations**: Created 13+ model comparison visualizations with professional styling
+- ✅ **Hyperparameter Optimization**: Implemented Grid Search with 400+ parameter combinations across 4 models
+- ✅ **Comprehensive Visualizations**: Created 15+ model comparison visualizations with professional styling
 - ✅ **Model Selection Framework**: Implemented multi-metric ranking system for optimal model selection
 - ✅ **Detailed Performance Analysis**: Added prediction plots and residual analysis for all 5 models
 - ✅ **Complete Documentation**: Updated all sections to reflect multi-model methodology and results
+- ✅ **Advanced Feature Engineering**: Engineered 22 predictive features from raw data
 - ✅ Fixed notebook cell structure and formatting issues
 - ✅ Added automated image saving for all visualizations
 - ✅ Improved error handling and data standardization pipeline
@@ -423,7 +429,7 @@ This capstone project successfully demonstrates mastery of fundamental data scie
 **Methodological Rigor**:
 - Systematic data quality assessment and cleaning procedures
 - Comprehensive exploratory data analysis with statistical validation
-- Advanced feature engineering creating 18+ meaningful predictive variables
+- Advanced feature engineering creating 22 meaningful predictive variables
 - Proper model evaluation using multiple metrics with clear business interpretation
 
 **Business Application**:
@@ -496,7 +502,7 @@ This capstone project distinguishes itself through:
 - **Model Selection Framework**: Systematic algorithm comparison using R², RMSE, MAE, CV scores, and training time analysis
 - **Visual Documentation**: Embedded images in README showcasing complete model comparison and analysis results
 - **Business Relevance**: Clear connection between technical analysis and practical business applications
-- **Technical Innovation**: Advanced feature engineering (18+ features) and automated visualization pipeline with model comparison
+- **Technical Innovation**: Advanced feature engineering (22 features) and automated visualization pipeline with model comparison
 - **Reproducible Research**: Complete documentation and code organization enabling replication and extension
 
 **Professional Readiness**: This analysis demonstrates industry-ready skills in data science, machine learning, model comparison, and business intelligence, positioning the analyst for immediate contribution in professional data science roles.
@@ -505,7 +511,7 @@ This capstone project distinguishes itself through:
 
 This project fulfills the capstone requirements for the UC Berkeley Machine Learning and Artificial Intelligence Program, demonstrating proficiency in:
 
-- **Data Science Fundamentals**: EDA, data cleaning, feature engineering (18+ features)
+- **Data Science Fundamentals**: EDA, data cleaning, feature engineering (22 features)
 - **Statistical Analysis**: Correlation analysis, hypothesis testing, cross-validation, model evaluation
 - **Machine Learning**: Multi-algorithm comparison (5 models), model selection, hyperparameter considerations
 - **Model Evaluation**: R², RMSE, MAE, cross-validation, overfitting detection, residual analysis

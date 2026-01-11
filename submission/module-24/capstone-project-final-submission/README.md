@@ -216,10 +216,10 @@ Behavioral Features:
 ### Model Performance & Comparison
 - **Models Evaluated**: 5 regression algorithms with identical preprocessing and evaluation
   - **Decision Tree Regressor**: ⭐ **Best Model** - R² = 1.000, RMSE = 0.000, MAE = 0.000
-  - Ridge Regression: R² = 0.XXX (strong linear relationship)
-  - Linear Regression: R² = 0.XXX (interpretable baseline)
-  - K-Nearest Neighbors: R² = 0.XXX (distance-based predictions)
-  - Support Vector Regression: R² = 0.XXX (kernel-based approach)
+  - Ridge Regression: R² = 0.9998 (strong linear relationship with L2 regularization)
+  - Linear Regression: R² = 0.9998 (interpretable baseline with excellent performance)
+  - K-Nearest Neighbors: R² = 0.9834 (distance-based predictions, good performance)
+  - Support Vector Regression: R² = 0.9964 (kernel-based approach with strong results)
 
 - **Evaluation Metrics**: RMSE, MAE, R-squared, 5-fold cross-validation with comprehensive business interpretation
 - **Metric Rationale**:

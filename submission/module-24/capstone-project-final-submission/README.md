@@ -312,9 +312,9 @@ The main analysis is contained in `notebooks/amazon_reviews_analysis_kaggle.ipyn
   - **6.5**: Business Insights and Recommendations
 - **Section 7**: Project Summary and Technical Documentation (Final results, best model analysis)
 
-## 🎨 Automated Visualizations
+## 🎨 Generated Visualizations Overview
 
-The notebook automatically generates **9 high-quality visualizations** saved to `results/visualizations/`:
+The notebook automatically generates **9 high-quality visualizations** saved to `results/visualizations/`. For visual examples of these charts, see the [Visualization Gallery](#-visualization-gallery) below.
 
 ### Exploratory Data Analysis:
 1. **Rating Distribution Analysis** - Comprehensive rating distribution and category analysis
@@ -364,48 +364,59 @@ The notebook automatically generates **9 high-quality visualizations** saved to 
    ![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
    *Executive summary with key findings, performance metrics, and business insights*
 
-All visualizations feature:
-- High-resolution output (300 DPI)
-- Professional styling with clear labels and titles
-- Business-focused insights and interpretations
-- Multi-model comparison with clear visual hierarchy
+### Technical Specifications:
+All visualizations are automatically generated with:
+- **High-resolution output** (300 DPI) for professional presentation
+- **Professional styling** with clear labels, titles, and consistent branding
+- **Business-focused insights** with interpretable metrics and recommendations
+- **Multi-model comparison** with clear visual hierarchy and performance ranking
+- **Automated saving** to `results/visualizations/` directory for easy access
 
-## 📸 Visual Examples
+## 📸 Visualization Gallery
 
-### Rating Distribution Analysis
+This section displays the actual generated visualizations described in the [Generated Visualizations Overview](#-generated-visualizations-overview) above. Each image demonstrates the comprehensive analysis and model comparison results.
+
+### Exploratory Data Analysis Charts
+
+**Rating Distribution Analysis**
 ![Rating Distribution Analysis](results/visualizations/01_rating_distribution_analysis.png)
 *Comprehensive analysis of rating distributions across product categories*
 
-### Text and Sentiment Analysis
+**Text Analysis**
 ![Text Analysis](results/visualizations/02_text_analysis.png)
 *Review text characteristics and patterns by rating level*
 
+**Sentiment Analysis**
 ![Sentiment Analysis](results/visualizations/03_sentiment_analysis.png)
 *Sentiment polarity and subjectivity patterns across ratings*
 
-### Multi-Model Comparison Dashboard
-![Model Comparison Comprehensive](results/visualizations/05_model_comparison_comprehensive.png)
-*⭐ Complete comparison of all 5 regression models across 8 evaluation dimensions including R², RMSE, MAE, cross-validation scores, training time, and composite ranking*
+**Advanced Sentiment Analysis**
+![Comprehensive Sentiment Analysis](results/visualizations/03_comprehensive_sentiment_analysis.png)
+*Advanced sentiment polarity and subjectivity analysis with TextBlob integration and business interpretation*
 
-### Model Predictions Comparison
+### Model Performance & Comparison Charts
+
+**⭐ Multi-Model Comparison Dashboard**
+![Model Comparison Comprehensive](results/visualizations/05_model_comparison_comprehensive.png)
+*Complete comparison of all 5 regression models across 8 evaluation dimensions including R², RMSE, MAE, cross-validation scores, training time, and composite ranking*
+
+**Model Predictions Comparison**
 ![Prediction Comparison](results/visualizations/06_prediction_comparison_all_models.png)
 *Actual vs predicted ratings for all 5 models: Linear Regression, Ridge, KNN, Decision Tree, and SVR*
 
-### Residuals Analysis
+**Residuals Analysis**
 ![Residuals Comparison](results/visualizations/07_residuals_comparison_all_models.png)
 *Residual plots for all 5 models showing prediction error patterns and model performance*
 
-### Best Model Performance
+**Best Model Performance**
 ![Model Performance](results/visualizations/04_model_performance.png)
 *Decision Tree (best model) performance metrics and feature importance analysis*
 
-### Executive Summary Dashboard
+### Executive Summary
+
+**Executive Summary Dashboard**
 ![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
 *Executive summary with key findings, performance metrics, and business insights*
-
-### Advanced Sentiment Analysis
-![Comprehensive Sentiment Analysis](results/visualizations/03_comprehensive_sentiment_analysis.png)
-*Advanced sentiment polarity and subjectivity analysis with TextBlob integration and business interpretation*
 
 ## 🎯 Success Criteria Met
 

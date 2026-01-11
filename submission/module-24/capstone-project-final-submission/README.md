@@ -436,12 +436,12 @@ This capstone project successfully demonstrates mastery of fundamental data scie
 
 The core research question—**"Can we predict product ratings and identify key drivers of customer satisfaction using Amazon product review data? Which machine learning algorithm provides the most accurate predictions?"**—has been comprehensively addressed:
 
-✅ **Predictive Capability**: Decision Tree model achieves perfect test performance (R² = 1.000) after systematic evaluation of 5 algorithms
-✅ **Model Comparison**: Comprehensive analysis of Linear Regression (baseline), Ridge, KNN, Decision Tree, and SVR with cross-validation
-✅ **Optimal Model Selection**: Decision Tree selected based on superior R², RMSE, MAE, and strong cross-validation performance
-✅ **Key Driver Identification**: Clear feature importance ranking reveals sentiment, engagement, and text complexity as primary satisfaction drivers
-✅ **Actionable Insights**: Business recommendations translate technical findings into strategic actions
-✅ **Methodological Validation**: Comprehensive evaluation with 13+ visualizations confirms model reliability and business applicability
+- ✅ **Predictive Capability**: Decision Tree model achieves perfect test performance (R² = 1.000) after systematic evaluation of 5 algorithms
+- ✅ **Model Comparison**: Comprehensive analysis of Linear Regression (baseline), Ridge, KNN, Decision Tree, and SVR with cross-validation
+- ✅ **Optimal Model Selection**: Decision Tree selected based on superior R², RMSE, MAE, and strong cross-validation performance
+- ✅ **Key Driver Identification**: Clear feature importance ranking reveals sentiment, engagement, and text complexity as primary satisfaction drivers
+- ✅ **Actionable Insights**: Business recommendations translate technical findings into strategic actions
+- ✅ **Methodological Validation**: Comprehensive evaluation with 13+ visualizations confirms model reliability and business applicability
 
 ### Business Impact & Strategic Value
 
@@ -491,13 +491,13 @@ The core research question—**"Can we predict product ratings and identify key 
 
 This capstone project distinguishes itself through:
 
-**Comprehensive Scope**: End-to-end analysis from raw data to business strategy with 8+ professional visualizations
-**Methodological Excellence**: Rigorous multi-model comparison with 5 algorithms, cross-validation, and comprehensive evaluation metrics
-**Model Selection Framework**: Systematic algorithm comparison using R², RMSE, MAE, CV scores, and training time analysis
-**Visual Documentation**: Embedded images in README showcasing complete model comparison and analysis results
-**Business Relevance**: Clear connection between technical analysis and practical business applications
-**Technical Innovation**: Advanced feature engineering (18+ features) and automated visualization pipeline with model comparison
-**Reproducible Research**: Complete documentation and code organization enabling replication and extension
+- **Comprehensive Scope**: End-to-end analysis from raw data to business strategy with 8+ professional visualizations
+- **Methodological Excellence**: Rigorous multi-model comparison with 5 algorithms, cross-validation, and comprehensive evaluation metrics
+- **Model Selection Framework**: Systematic algorithm comparison using R², RMSE, MAE, CV scores, and training time analysis
+- **Visual Documentation**: Embedded images in README showcasing complete model comparison and analysis results
+- **Business Relevance**: Clear connection between technical analysis and practical business applications
+- **Technical Innovation**: Advanced feature engineering (18+ features) and automated visualization pipeline with model comparison
+- **Reproducible Research**: Complete documentation and code organization enabling replication and extension
 
 **Professional Readiness**: This analysis demonstrates industry-ready skills in data science, machine learning, model comparison, and business intelligence, positioning the analyst for immediate contribution in professional data science roles.
 

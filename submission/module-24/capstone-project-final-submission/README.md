@@ -317,29 +317,29 @@ The main analysis is contained in `notebooks/amazon_reviews_analysis_kaggle.ipyn
 The notebook automatically generates **9 high-quality visualizations** saved to `results/visualizations/`:
 
 ### Exploratory Data Analysis:
-1. **01_rating_distribution_analysis.png** - Comprehensive rating distribution and category analysis
+1. **Rating Distribution Analysis** - Comprehensive rating distribution and category analysis
    ![Rating Distribution Analysis](results/visualizations/01_rating_distribution_analysis.png)
    *Comprehensive analysis of rating distributions across product categories*
 
-2. **02_text_analysis.png** - Review text characteristics and patterns by rating
+2. **Text Analysis** - Review text characteristics and patterns by rating
    ![Text Analysis](results/visualizations/02_text_analysis.png)
    *Review text characteristics and patterns by rating level*
 
-3. **03_sentiment_analysis.png** - Sentiment polarity and subjectivity analysis
+3. **Sentiment Analysis** - Sentiment polarity and subjectivity analysis
    ![Sentiment Analysis](results/visualizations/03_sentiment_analysis.png)
    *Sentiment polarity and subjectivity patterns across ratings*
 
 ### Advanced Analysis:
-3b. **03_comprehensive_sentiment_analysis.png** - Advanced sentiment analysis with TextBlob integration
+4. **Comprehensive Sentiment Analysis** - Advanced sentiment analysis with TextBlob integration
     ![Comprehensive Sentiment Analysis](results/visualizations/03_comprehensive_sentiment_analysis.png)
     *Advanced sentiment polarity and subjectivity analysis with business interpretation*
 
 ### Model Performance & Comparison:
-4. **04_model_performance.png** - Best model evaluation and feature importance
+5. **Model Performance** - Best model evaluation and feature importance
    ![Model Performance](results/visualizations/04_model_performance.png)
    *Decision Tree (best model) performance metrics and feature importance analysis*
 
-5. **05_model_comparison_comprehensive.png** - ⭐ **Complete multi-model comparison dashboard with 8 panels:**
+6. **Multi-Model Comparison Dashboard** - ⭐ **Complete multi-model comparison dashboard with 8 panels:**
    - R² scores across all 5 models
    - RMSE comparison for error analysis
    - MAE comparison for robust error metrics
@@ -351,16 +351,16 @@ The notebook automatically generates **9 high-quality visualizations** saved to 
    ![Model Comparison Comprehensive](results/visualizations/05_model_comparison_comprehensive.png)
    *⭐ Complete comparison of all 5 regression models across 8 evaluation dimensions*
 
-6. **06_prediction_comparison_all_models.png** - Actual vs predicted scatter plots for all 5 models
+7. **Prediction Comparison All Models** - Actual vs predicted scatter plots for all 5 models
    ![Prediction Comparison](results/visualizations/06_prediction_comparison_all_models.png)
    *Actual vs predicted ratings for all 5 models: Linear Regression, Ridge, KNN, Decision Tree, and SVR*
 
-7. **07_residuals_comparison_all_models.png** - Residual analysis plots for all 5 models
+8. **Residuals Comparison All Models** - Residual analysis plots for all 5 models
    ![Residuals Comparison](results/visualizations/07_residuals_comparison_all_models.png)
    *Residual plots for all 5 models showing prediction error patterns and model performance*
 
 ### Executive Summary:
-8. **05_final_summary_dashboard.png** - Executive summary with key performance metrics
+9. **Final Summary Dashboard** - Executive summary with key performance metrics
    ![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
    *Executive summary with key findings, performance metrics, and business insights*
 

@@ -29,7 +29,7 @@ The complexity of predicting customer satisfaction from unstructured review data
 ### Success Metrics
 - **Predictive Accuracy**: R² > 0.6 for rating prediction with interpretable error bounds
 - **Business Value**: Clear feature importance ranking with actionable recommendations
-- **Methodological Rigor**: Comprehensive EDA with 15+ professional visualizations
+- **Methodological Rigor**: Comprehensive EDA with 9 professional visualizations
 - **Reproducibility**: Complete pipeline from raw data to business insights
 
 ## 📁 Project Structure
@@ -50,12 +50,12 @@ capstone-project-final-submission/
         ├── 01_rating_distribution_analysis.png
         ├── 02_text_analysis.png
         ├── 03_sentiment_analysis.png
-        ├── 04_model_performance.png
-        ├── 05_model_comparison_comprehensive.png  # Multi-model comparison dashboard
-        ├── 06_prediction_comparison_all_models.png  # Predictions across all models
-        ├── 07_residuals_comparison_all_models.png   # Residuals analysis
-        ├── 08_final_summary_dashboard.png          # Executive summary dashboard
-        └── 09_comprehensive_sentiment_analysis.png # Advanced sentiment analysis
+        ├── 03_comprehensive_sentiment_analysis.png # Advanced sentiment analysis
+        ├── 04_model_performance.png                # Best model evaluation
+        ├── 05_final_summary_dashboard.png          # Executive summary dashboard
+        ├── 05_model_comparison_comprehensive.png   # Multi-model comparison dashboard
+        ├── 06_prediction_comparison_all_models.png # Predictions across all models
+        └── 07_residuals_comparison_all_models.png  # Residuals analysis
 ```
 
 ## 🛠️ Technologies Used
@@ -314,27 +314,32 @@ The main analysis is contained in `notebooks/amazon_reviews_analysis_kaggle.ipyn
 
 ## 🎨 Automated Visualizations
 
-The notebook automatically generates **15+ high-quality visualizations** saved to `results/visualizations/`:
+The notebook automatically generates **9 high-quality visualizations** saved to `results/visualizations/`:
 
 ### Exploratory Data Analysis:
-1. **01_rating_distribution_analysis.png** - Comprehensive rating distribution and category analysis
+1. **Rating Distribution Analysis** - Comprehensive rating distribution and category analysis
    ![Rating Distribution Analysis](results/visualizations/01_rating_distribution_analysis.png)
    *Comprehensive analysis of rating distributions across product categories*
 
-2. **02_text_analysis.png** - Review text characteristics and patterns by rating
+2. **Text Analysis** - Review text characteristics and patterns by rating
    ![Text Analysis](results/visualizations/02_text_analysis.png)
    *Review text characteristics and patterns by rating level*
 
-3. **03_sentiment_analysis.png** - Sentiment polarity and subjectivity analysis
+3. **Sentiment Analysis** - Sentiment polarity and subjectivity analysis
    ![Sentiment Analysis](results/visualizations/03_sentiment_analysis.png)
    *Sentiment polarity and subjectivity patterns across ratings*
 
+### Advanced Analysis:
+4. **Comprehensive Sentiment Analysis** - Advanced sentiment analysis with TextBlob integration
+    ![Comprehensive Sentiment Analysis](results/visualizations/03_comprehensive_sentiment_analysis.png)
+    *Advanced sentiment polarity and subjectivity analysis with business interpretation*
+
 ### Model Performance & Comparison:
-4. **04_model_performance.png** - Best model evaluation and feature importance
+5. **Model Performance** - Best model evaluation and feature importance
    ![Model Performance](results/visualizations/04_model_performance.png)
    *Decision Tree (best model) performance metrics and feature importance analysis*
 
-5. **05_model_comparison_comprehensive.png** - ⭐ **Complete multi-model comparison dashboard with 8 panels:**
+6. **Multi-Model Comparison Dashboard** - ⭐ **Complete multi-model comparison dashboard with 8 panels:**
    - R² scores across all 5 models
    - RMSE comparison for error analysis
    - MAE comparison for robust error metrics
@@ -346,23 +351,18 @@ The notebook automatically generates **15+ high-quality visualizations** saved t
    ![Model Comparison Comprehensive](results/visualizations/05_model_comparison_comprehensive.png)
    *⭐ Complete comparison of all 5 regression models across 8 evaluation dimensions*
 
-6. **06_prediction_comparison_all_models.png** - Actual vs predicted scatter plots for all 5 models
+7. **Prediction Comparison All Models** - Actual vs predicted scatter plots for all 5 models
    ![Prediction Comparison](results/visualizations/06_prediction_comparison_all_models.png)
    *Actual vs predicted ratings for all 5 models: Linear Regression, Ridge, KNN, Decision Tree, and SVR*
 
-7. **07_residuals_comparison_all_models.png** - Residual analysis plots for all 5 models
+8. **Residuals Comparison All Models** - Residual analysis plots for all 5 models
    ![Residuals Comparison](results/visualizations/07_residuals_comparison_all_models.png)
    *Residual plots for all 5 models showing prediction error patterns and model performance*
 
 ### Executive Summary:
-8. **08_final_summary_dashboard.png** - Executive summary with key performance metrics
-   ![Final Summary Dashboard](results/visualizations/08_final_summary_dashboard.png)
+9. **Final Summary Dashboard** - Executive summary with key performance metrics
+   ![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
    *Executive summary with key findings, performance metrics, and business insights*
-
-### Advanced Analysis:
-9. **09_comprehensive_sentiment_analysis.png** - Advanced sentiment analysis with TextBlob integration
-   ![Comprehensive Sentiment Analysis](results/visualizations/09_comprehensive_sentiment_analysis.png)
-   *Advanced sentiment polarity and subjectivity analysis with business interpretation*
 
 All visualizations feature:
 - High-resolution output (300 DPI)
@@ -400,11 +400,11 @@ All visualizations feature:
 *Decision Tree (best model) performance metrics and feature importance analysis*
 
 ### Executive Summary Dashboard
-![Final Summary Dashboard](results/visualizations/08_final_summary_dashboard.png)
+![Final Summary Dashboard](results/visualizations/05_final_summary_dashboard.png)
 *Executive summary with key findings, performance metrics, and business insights*
 
 ### Advanced Sentiment Analysis
-![Comprehensive Sentiment Analysis](results/visualizations/09_comprehensive_sentiment_analysis.png)
+![Comprehensive Sentiment Analysis](results/visualizations/03_comprehensive_sentiment_analysis.png)
 *Advanced sentiment polarity and subjectivity analysis with TextBlob integration and business interpretation*
 
 ## 🎯 Success Criteria Met
@@ -413,7 +413,7 @@ All visualizations feature:
 
 ✅ **Code Quality**: Error-free Python code with proper imports, clear comments, and professional structure.
 
-✅ **Visualizations**: 15+ comprehensive plots with embedded images, readable labels, and automated saving.
+✅ **Visualizations**: 9 comprehensive plots with embedded images, readable labels, and automated saving.
 
 ✅ **Data Cleaning**: Systematic handling of missing values, duplicates, and data standardization.
 
@@ -427,7 +427,7 @@ All visualizations feature:
 
 ## 📊 Additional Resources
 
-- **Jupyter Notebook**: Complete analysis with 15+ high-quality visualizations and detailed explanations
+- **Jupyter Notebook**: Complete analysis with 9 high-quality visualizations and detailed explanations
 - **Project Summary**: Executive summary with key findings in `results/PROJECT_SUMMARY.md`
 - **Automated Visualizations**: High-quality PNG exports with professional formatting
 - **Visual Examples**: Embedded images in README showing all model comparison results
@@ -441,7 +441,7 @@ All visualizations feature:
 - ✅ **Enhanced Model Analysis**: Expanded from single Linear Regression to comprehensive 5-model comparison
 - ✅ **Advanced Evaluation**: Added cross-validation, overfitting detection, and training time analysis
 - ✅ **Hyperparameter Optimization**: Implemented Grid Search with 400+ parameter combinations across 4 models
-- ✅ **Comprehensive Visualizations**: Created 15+ model comparison visualizations with professional styling
+- ✅ **Comprehensive Visualizations**: Created 9 model comparison visualizations with professional styling
 - ✅ **Model Selection Framework**: Implemented multi-metric ranking system for optimal model selection
 - ✅ **Detailed Performance Analysis**: Added prediction plots and residual analysis for all 5 models
 - ✅ **Complete Documentation**: Updated all sections to reflect multi-model methodology and results
@@ -488,7 +488,7 @@ The core research question—**"Can we predict product ratings and identify key 
 - ✅ **Optimal Model Selection**: Decision Tree selected based on superior R², RMSE, MAE, and strong cross-validation performance
 - ✅ **Key Driver Identification**: Clear feature importance ranking reveals sentiment, engagement, and text complexity as primary satisfaction drivers
 - ✅ **Actionable Insights**: Business recommendations translate technical findings into strategic actions
-- ✅ **Methodological Validation**: Comprehensive evaluation with 15+ visualizations confirms model reliability and business applicability
+- ✅ **Methodological Validation**: Comprehensive evaluation with 9 visualizations confirms model reliability and business applicability
 
 ### Business Impact & Strategic Value
 
@@ -538,7 +538,7 @@ The core research question—**"Can we predict product ratings and identify key 
 
 This capstone project distinguishes itself through:
 
-- **Comprehensive Scope**: End-to-end analysis from raw data to business strategy with 15+ professional visualizations
+- **Comprehensive Scope**: End-to-end analysis from raw data to business strategy with 9 professional visualizations
 - **Methodological Excellence**: Rigorous multi-model comparison with 5 algorithms, cross-validation, and comprehensive evaluation metrics
 - **Model Selection Framework**: Systematic algorithm comparison using R², RMSE, MAE, CV scores, and training time analysis
 - **Visual Documentation**: Embedded images in README showcasing complete model comparison and analysis results
@@ -577,7 +577,7 @@ This project fulfills the capstone requirements for the UC Berkeley Machine Lear
 | **Features** | 22 engineered predictive features | Comprehensive text + sentiment analysis |
 | **Models** | 5 algorithms with hyperparameter tuning | Decision Tree: R² = 1.000 (best) |
 | **Evaluation** | R², RMSE, MAE, 5-fold CV | Rigorous statistical validation |
-| **Visualizations** | 15+ professional plots (300 DPI) | Complete model comparison coverage |
+| **Visualizations** | 9 professional plots (300 DPI) | Complete model comparison coverage |
 | **Documentation** | Production-ready with deployment guide | Industry-standard technical communication |
 | **Reproducibility** | Complete pipeline with dependencies | 100% reproducible analysis framework |
 
